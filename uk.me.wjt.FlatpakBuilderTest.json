@@ -1,0 +1,23 @@
+{
+    "app-id": "uk.me.wjt.FlatpakBuilderTest",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "21.08",
+    "sdk": "org.freedesktop.Sdk",
+    "command": "/bin/true",
+    "rename-desktop-file": "test.desktop",
+    "modules": [
+        {
+            "name": "test",
+            "buildsystem": "simple",
+            "sources": [
+                {
+                    "type": "file",
+                    "path": "test.desktop"
+                }
+            ],
+            "build-commands": [
+                "install -D -t /app/share/applications test.desktop"
+            ]
+        }
+    ]
+}
